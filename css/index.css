@@ -1,0 +1,57 @@
+body{
+	perspective: 5000px;
+}
+.fa{
+	position: relative;
+	margin: 100px auto;
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	transform: rotate3d(1,1,1,45deg);
+	animation: dong 3s infinite;
+	
+}
+@keyframes dong{
+	from{transform: rotate3d(1,1,1,45deg);}
+	to{transform: rotate3d(1,1,1,405deg);}
+}
+.item{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	opacity: 0.4;
+	border-radius: 35%;
+	top: 0;
+	left: 0;
+	margin: 50px auto;
+	/*animation: hua 10s infinite;*/
+}
+@keyframes hua{
+	from{transform: translateZ(50px);}
+	50%{transform: translateZ(100px);}
+	to{transform: translateZ(50px);}
+}
+.ch1{
+	background: skyblue;
+	transform: translateZ(50px);
+}
+.ch2{
+	background: blue;
+	transform: translateZ(-50px);
+}
+.ch3{
+	background: lawngreen;
+	transform: rotateY(90deg) translateZ(50px);
+}
+.ch4{
+	background: green;
+	transform: rotateY(-90deg) translateZ(50px);
+}
+.ch5{
+	background: yellow;
+	transform: rotateX(90deg) translateZ(50px);
+}
+.ch6{
+	background: orangered;
+	transform: rotateX(-90deg) translateZ(50px);
+}
